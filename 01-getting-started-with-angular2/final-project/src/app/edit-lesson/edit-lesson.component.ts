@@ -17,7 +17,9 @@ export class EditLessonComponent {
 
   constructor(private route:ActivatedRoute, private lessonsService: LessonsService) {
 
-    route.data.subscribe(data => this.lesson = data['lesson']);
+    route.data
+      .do(console.log)
+      .subscribe(data => this.lesson = data['lesson']);
 
 
 

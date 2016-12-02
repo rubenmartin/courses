@@ -14,6 +14,7 @@ export class NewLessonComponent implements OnInit {
   constructor(private lessonsService: LessonsService,  route: ActivatedRoute) {
 
     this.courseId = route.snapshot.queryParams['courseId'];
+    console.log("course", this.courseId);
 
   }
 

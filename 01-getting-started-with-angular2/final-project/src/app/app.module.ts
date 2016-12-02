@@ -18,12 +18,13 @@ import {SafePipe} from "./shared/safe.pipe";
 import {LessonFormComponent} from "./lesson-form/lesson-form.component";
 import {NewLessonComponent} from "./new-lesson/new-lesson.component";
 import {EditLessonComponent} from "./edit-lesson/edit-lesson.component";
-import {LessonResolver} from "./shared/resolvers/lesson.resolver";
+import {LessonResolver} from "./shared/model/lesson.resolver";
 import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {AuthService} from "./shared/security/auth.service";
 import {AuthGuard} from "./shared/security/auth.guard";
 import {LessonsRestService} from "./shared/model/lessons-rest.service";
+
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import {LessonsRestService} from "./shared/model/lessons-rest.service";
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [LessonResolver, CoursesService, LessonsService, AuthService, AuthGuard, LessonsRestService],
+  providers: [CoursesService, LessonsService, AuthService, AuthGuard, LessonsRestService, LessonResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
